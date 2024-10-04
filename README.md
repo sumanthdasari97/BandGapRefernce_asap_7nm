@@ -5,7 +5,9 @@ ASAP7nm is a process design kit (PDK) created by the collaboration between acade
 To install this PDK, you can clone the repository available at https://github.com/The-OpenROAD-Project/asap7.git
 
 To install this PDK, you can clone the repository available at
-Xschem Installation for Ubuntu 
+ 
+ Xschem Installation for Ubuntu 
+
 Open Your Terminal in your ubuntu workstation and execute the following command one by one or copy them into a script and run the script using the terminal.
 ```bash
 # Install xschem, a schematic capture tool
