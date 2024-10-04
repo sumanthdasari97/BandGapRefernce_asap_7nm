@@ -26,7 +26,7 @@ cd release
 make
 ## install the program and needed files.
 sudo make install
-```bash
+```
 
 
 
