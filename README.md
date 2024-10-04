@@ -249,4 +249,87 @@ C {code_shown.sym} 510 50 0 0 {name=s1 only_toplevel=false value="
 .endc
 "}
 ```
-https://github.com/VrushabhDamle/sky130CircuitDesignWorkshop?tab=readme-ov-file
+For performing the transient analysis, the following code is required:
+```
+v {xschem version=3.4.5 file_version=1.2
+}
+G {}
+K {}
+V {}
+S {}
+E {}
+N 210 70 210 110 {
+lab=nfet_out}
+N 170 40 170 140 {
+lab=nfet_in}
+N 210 -40 210 10 {
+lab=vdd}
+N 210 170 210 220 {
+lab=GND}
+N 210 140 280 140 {
+lab=GND}
+N 280 140 280 200 {
+lab=GND}
+N 210 200 280 200 {
+lab=GND}
+N 210 40 300 40 {
+lab=vdd}
+N 300 -20 300 40 {
+lab=vdd}
+N 210 -20 300 -20 {
+lab=vdd}
+N 120 80 170 80 {
+lab=nfet_in}
+N 210 90 310 90 {
+lab=nfet_out}
+C {/home/dasari/Desktop/asap_7nm_Xschem/asap_7nm_pfet.sym} 190 40 0 0 {name=pfet1 model=asap_7nm_pfet spiceprefix=X l=7e-009 nfin=38}
+C {/home/dasari/Desktop/asap_7nm_Xschem/asap_7nm_nfet.sym} 190 140 0 0 {name=nfet1 model=asap_7nm_nfet spiceprefix=X l=7e-009 nfin=42}
+C {gnd.sym} 210 220 0 0 {name=l1 lab=GND}
+C {lab_pin.sym} 210 -40 0 0 {name=p4 sig_type=std_logic lab=vdd}
+C {lab_pin.sym} 120 80 0 0 {name=p5 sig_type=std_logic lab=nfet_in}
+C {lab_pin.sym} 310 90 2 0 {name=p1 sig_type=std_logic lab=nfet_out}
+C {vsource.sym} -80 100 0 0 {name=V1 value="pulse(0 0.7 20p 10p 10p 20p 500p 1)" savecurrent=false}
+C {gnd.sym} -80 130 0 0 {name=l2 lab=GND}
+C {lab_pin.sym} -80 70 0 0 {name=p2 sig_type=std_logic lab=nfet_in}
+C {vsource.sym} 410 170 0 0 {name=V2 value=0.7 savecurrent=false}
+C {gnd.sym} 410 200 0 0 {name=l3 lab=GND}
+C {lab_pin.sym} 410 140 0 0 {name=p3 sig_type=std_logic lab=vdd}
+C {code_shown.sym} 510 50 0 0 {name=s1 only_toplevel=false value="
+.tran 0.1p 100p 
+.control
+    run
+    set xbrushwidth=3
+    plot  nfe_out nfet_in
+.endc
+"}
+```
+![image](https://github.com/user-attachments/assets/ee5c19c9-be7a-4a24-97a2-d0796111b250)
+Figure snapshot of the xschem performing transient analysis
+![image](https://github.com/user-attachments/assets/c26390c0-24db-468f-b0db-6849b9a725a6)
+Figure snapshot of the output plot nfet_in vs nfet_out 
+
+Calculating Rise Delay:
+
+    Zoom In: Focus on the segment of the waveform where the input pulse transitions downward and the output pulse transitions upward, particularly around the voltage level of 50% = Vdd/2​​(0.35v). You can achieve this by right-clicking on the waveform and dragging to highlight the relevant area.
+
+    Identify Points: Click on the rising edge of the output waveform at 50% = Vdd/2​​(0.35v) to note the coordinates (x0, y0).
+
+    Find Input Point: Similarly, identify the corresponding point for the falling edge of the input waveform at 50% = Vdd/2​​(0.35v).
+
+    Calculate Delay: The rise delay is then calculated by finding the difference between the x-coordinate of the output's rising edge and the x-coordinate of the input's falling edge.
+
+Calculating Fall Delay:
+
+    Zoom In: Focus on the section of the waveforms where the input pulse rises and the output pulse falls, especially near the voltage level of 50% = Vdd/2​​(0.35v). Right-click and drag to select this area.
+
+    Identify Points: Click on the falling edge of the output waveform at 50% = Vdd/2​​(0.35v) to obtain the coordinates (x0, y0).
+
+    Find Input Point: Next, locate the corresponding point for the rising edge of the input waveform at 50% = Vdd/2​​(0.35v).
+
+    Calculate Delay: The fall delay is determined by subtracting the x-coordinate of the input's rising edge from the x-coordinate of the output's falling edge.
+
+![image](https://github.com/user-attachments/assets/22653a1f-8d9f-43dd-9ed1-d3653b0ef799)
+
+
+
+
