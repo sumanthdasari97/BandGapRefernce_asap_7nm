@@ -28,6 +28,10 @@ make
 sudo make install
 ```
 
+Add 7nm model .sch file for FinFET characterization
+
+- Integrated the 7nm model .sch file from an external GitHub repository.
+  
 
 
 
