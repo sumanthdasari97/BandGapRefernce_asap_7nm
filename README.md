@@ -249,4 +249,4 @@ C {code_shown.sym} 510 50 0 0 {name=s1 only_toplevel=false value="
 .endc
 "}
 ```
-
+https://github.com/VrushabhDamle/sky130CircuitDesignWorkshop?tab=readme-ov-file
