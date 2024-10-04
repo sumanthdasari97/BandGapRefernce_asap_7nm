@@ -164,7 +164,34 @@ Propagation delay (t_pd) is a critical parameter in digital circuits, particular
 To determine the propagation delay of an inverter using Ngspice, follow these steps:
 
 1. **Circuit Setup:**
-   - Create a netlist for the inverter circuit in Ngspice. This includes defining the inverter's PMOS and NMOS transistors and setting up the input and output connections. You may also include load capacitance to simulate realistic operating conditions.
+   - Create a netlist for the inverter circuit in Ngspice. This includes defining the inverter's Pfet and Nfet transistors and setting up the input and output connections.You can generate spice from the xschem with inverter_vtc_.sch
+     # Generating a SPICE Netlist from Xschem
+
+Follow these steps to generate a SPICE netlist from your schematic in Xschem:
+
+## Step 1: Open Your Schematic
+1. Launch Xschem.
+2. Open your schematic file (e.g., `inverter_vtc_.sch`).
+
+## Step 2: Set Up Netlist Generation
+- Ensure your schematic is correctly configured with all components and connections.
+
+## Step 3: Export the Netlist
+1. Navigate to the menu bar.
+2. Look for the option to generate or export a netlist. This is typically found under `File` or a specific `Export` menu.
+3. Select "Export SPICE" or "Generate Netlist."
+
+## Step 4: Choose the Format
+- Choose the SPICE format (or any other format you need) and specify any necessary parameters.
+
+## Step 5: Save the Netlist
+- Select a destination to save the generated netlist file.
+
+## Step 6: Run Simulation
+- Use the generated netlist in your simulation software, such as Ngspice.
+
+You have now successfully generated a SPICE netlist from your schematic in Xschem!
+
 
    ```
 
