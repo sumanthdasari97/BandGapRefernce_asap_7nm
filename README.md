@@ -285,7 +285,7 @@ Figure Snapshot shows the xo and yo coordinates inthe nspice terminal
    - \( VIL \) = Input low voltage threshold
    - \( VOL \) = Output low voltage
 
-
+For performing the noise margin, the following code is required:
 ```
 v {xschem version=3.4.5 file_version=1.2
 }
@@ -347,6 +347,25 @@ C {code_shown.sym} 510 50 0 0 {name=s1 only_toplevel=false value="
 .endc
 "}
 ```
+![image](https://github.com/user-attachments/assets/cf5a66b2-a38f-4feb-8bf6-3d53df2ca579)
+Figure snapshot of the xschem performing NM
+![Screenshot from 2024-10-04 22-40-50](https://github.com/user-attachments/assets/c45bff04-3c8d-4d94-9a09-67d59b045253)
+Figure snapshot of nfet_out vs gain 
+
+** Procedure to Calculate Noise Margins from the Plot
+Run the ngspice Command: Execute the command to start ngspice and open your simulation plot.
+
+    Identify Points on the Curve:
+    Finding the High Point: Click on the point near the top of the graph where the slope of the curve is approximately -1. For this example, where x0=0.235577 which is VIL and VOL for an inverter is ov
+        Finding the Low Point: Next, click on the point towards the bottom of the graph that also shows a slope of approximately -1. For this example where x1=0.418841 which is VIH and VOH for an inverter is 0.7v 
+
+    Calculate Noise Margin High (NMH):
+        Use the formula NMH=VOH−VIH NMH=VOH−VIH. In this case, VOH corresponds to 0.7  and VIH corresponds to x1​.
+        Therefore, NMH=0.7−0.418841=0.281159 
+
+    Calculate Noise Margin Low (NML):
+        Use the formula NML=VIL−VOL. Here, VIL is represented by x0​ and VOL is corresponds to 0v​.
+        Thus, NML=0.235577-0=0.235577
 
 
 
