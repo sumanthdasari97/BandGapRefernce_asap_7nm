@@ -249,24 +249,17 @@ Figure snapshot of the xschem performing transient analysis
 Figure snapshot of the output plot nfet_in vs nfet_out 
 
 Calculating Rise Delay:
+- Zoom In: Focus on the segment of the waveform where the input pulse transitions downward and the output pulse transitions upward, particularly around the voltage level of 50% = Vdd/2​​(0.35v). You can achieve this by right-clicking on the waveform and dragging to highlight the relevant area.
+- Identify Points: Click on the rising edge of the output waveform at 50% = Vdd/2​​(0.35v) to note the coordinates (x0, y0).
+- Find Input Point: Similarly, identify the corresponding point for the falling edge of the input waveform at 50% = Vdd/2​​(0.35v).
 
-    Zoom In: Focus on the segment of the waveform where the input pulse transitions downward and the output pulse transitions upward, particularly around the voltage level of 50% = Vdd/2​​(0.35v). You can achieve this by right-clicking on the waveform and dragging to highlight the relevant area.
-
-    Identify Points: Click on the rising edge of the output waveform at 50% = Vdd/2​​(0.35v) to note the coordinates (x0, y0).
-
-    Find Input Point: Similarly, identify the corresponding point for the falling edge of the input waveform at 50% = Vdd/2​​(0.35v).
-
-    Calculate Delay: The rise delay is then calculated by finding the difference between the x-coordinate of the output's rising edge and the x-coordinate of the input's falling edge.
+- Calculate Delay: The rise delay is then calculated by finding the difference between the x-coordinate of the output's rising edge and the x-coordinate of the input's falling edge.
 
 Calculating Fall Delay:
-
-    Zoom In: Focus on the section of the waveforms where the input pulse rises and the output pulse falls, especially near the voltage level of 50% = Vdd/2​​(0.35v). Right-click and drag to select this area.
-
-    Identify Points: Click on the falling edge of the output waveform at 50% = Vdd/2​​(0.35v) to obtain the coordinates (x0, y0).
-
-    Find Input Point: Next, locate the corresponding point for the rising edge of the input waveform at 50% = Vdd/2​​(0.35v).
-
-    Calculate Delay: The fall delay is determined by subtracting the x-coordinate of the input's rising edge from the x-coordinate of the output's falling edge.
+- Zoom In: Focus on the section of the waveforms where the input pulse rises and the output pulse falls, especially near the voltage level of 50% = Vdd/2​​(0.35v). Right-click and drag to select this area.
+- Identify Points: Click on the falling edge of the output waveform at 50% = Vdd/2​​(0.35v) to obtain the coordinates (x0, y0).
+- Find Input Point: Next, locate the corresponding point for the rising edge of the input waveform at 50% = Vdd/2​​(0.35v).
+- Calculate Delay: The fall delay is determined by subtracting the x-coordinate of the input's rising edge from the x-coordinate of the output's falling edge.
 
 ![image](https://github.com/user-attachments/assets/22653a1f-8d9f-43dd-9ed1-d3653b0ef799)
 
