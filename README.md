@@ -12,6 +12,21 @@ sudo make install
 cd ..
 ```
 
+Ngspice Installation for Ubuntu 
+Open Your Terminal  your ubuntu workstation and execute the following command one by one or copy them into a script and run the script using the terminal.
+```bash
+## clone the source repository into a local ngspice_git directory
+git clone https://git.code.sf.net/p/ngspice/ngspice ngspice_git
+cd ngspice_git
+mkdir release
+./autogen.sh
+cd release
+../configure --with-x --enable-xspice --disable-debug --enable-cider --with-readline=yes --enable-openmp --enable-osdi
+## build the program
+make
+## install the program and needed files.
+sudo make install
+```bash
 
 
 
