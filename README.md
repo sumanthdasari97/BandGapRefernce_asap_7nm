@@ -155,43 +155,98 @@ This characterization allows me to analyze how different transistor sizing affec
 
 # Propagation Delay (t_pd) in Inverter Characterization
 Propagation delay (t_pd) is a critical parameter in digital circuits, particularly in the design and characterization of inverters. It refers to the time it takes for a change in the input signal to produce a corresponding change in the output signal. Understanding propagation delay is essential for ensuring that a circuit operates correctly at the desired frequency and meets timing specifications.
-# Propagation Delay (t_pd) in Inverter Characterization Using Ngspice
-
-**Propagation delay (t_pd)** is a critical parameter in digital circuit design, especially when characterizing inverters. It represents the time taken for an input signal change to reflect at the output. Understanding propagation delay is essential for ensuring that digital circuits function correctly within specified timing constraints.
-
 ## Measuring Propagation Delay with Ngspice
 
 To determine the propagation delay of an inverter using Ngspice, follow these steps:
 
 1. **Circuit Setup:**
    - Create a netlist for the inverter circuit in Ngspice. This includes defining the inverter's Pfet and Nfet transistors and setting up the input and output connections.You can generate spice from the xschem with inverter_vtc_.sch
-     # Generating a SPICE Netlist from Xschem
+Generating a SPICE Netlist from Xschem
 
 Follow these steps to generate a SPICE netlist from your schematic in Xschem:
 
-## Step 1: Open Your Schematic
+- Step 1: Open Your Schematic
 1. Launch Xschem.
-2. Open your schematic file (e.g., `inverter_vtc_.sch`).
+2. Open your schematic file ( `inverter_vtc.sch`).
 
-## Step 2: Set Up Netlist Generation
+- Step 2: Set Up Netlist Generation
 - Ensure your schematic is correctly configured with all components and connections.
 
-## Step 3: Export the Netlist
+- Step 3: Export the Netlist
 1. Navigate to the menu bar.
 2. Look for the option to generate or export a netlist. This is typically found under `File` or a specific `Export` menu.
 3. Select "Export SPICE" or "Generate Netlist."
 
-## Step 4: Choose the Format
+- Step 4: Choose the Format
 - Choose the SPICE format (or any other format you need) and specify any necessary parameters.
 
-## Step 5: Save the Netlist
+- Step 5: Save the Netlist
 - Select a destination to save the generated netlist file.
 
-## Step 6: Run Simulation
+- Step 6: Run Simulation
 - Use the generated netlist in your simulation software, such as Ngspice.
 
 You have now successfully generated a SPICE netlist from your schematic in Xschem!
-
-
+   
    ```
+v {xschem version=3.4.5 file_version=1.2
+}
+G {}
+K {}
+V {}
+S {}
+E {}
+N 210 70 210 110 {
+lab=nfet_out}
+N 170 40 170 140 {
+lab=nfet_in}
+N 210 -40 210 10 {
+lab=vdd}
+N 210 170 210 220 {
+lab=GND}
+N 210 140 280 140 {
+lab=GND}
+N 280 140 280 200 {
+lab=GND}
+N 210 200 280 200 {
+lab=GND}
+N 210 40 300 40 {
+lab=vdd}
+N 300 -20 300 40 {
+lab=vdd}
+N 210 -20 300 -20 {
+lab=vdd}
+N 120 80 170 80 {
+lab=nfet_in}
+N 210 90 310 90 {
+lab=nfet_out}
+C {/home/dasari/Desktop/asap_7nm_Xschem/asap_7nm_pfet.sym} 190 40 0 0 {name=pfet1 model=asap_7nm_pfet spiceprefix=X l=7e-009 nfin=15}
+C {/home/dasari/Desktop/asap_7nm_Xschem/asap_7nm_nfet.sym} 190 140 0 0 {name=nfet1 model=asap_7nm_nfet spiceprefix=X l=7e-009 nfin=18}
+C {gnd.sym} 210 220 0 0 {name=l1 lab=GND}
+C {lab_pin.sym} 210 -40 0 0 {name=p4 sig_type=std_logic lab=vdd}
+C {lab_pin.sym} 120 80 0 0 {name=p5 sig_type=std_logic lab=nfet_in}
+C {lab_pin.sym} 310 90 2 0 {name=p1 sig_type=std_logic lab=nfet_out}
+C {vsource.sym} -80 100 0 0 {name=V1 value="pulse(0 0.7 20p 10p 10p 20p 500p 1)" savecurrent=false}
+C {gnd.sym} -80 130 0 0 {name=l2 lab=GND}
+C {lab_pin.sym} -80 70 0 0 {name=p2 sig_type=std_logic lab=nfet_in}
+C {vsource.sym} 410 170 0 0 {name=V2 value=0.7 savecurrent=false}
+C {gnd.sym} 410 200 0 0 {name=l3 lab=GND}
+C {lab_pin.sym} 410 140 0 0 {name=p3 sig_type=std_logic lab=vdd}
+C {code_shown.sym} 510 50 0 0 {name=s1 only_toplevel=false value="
+.dc v1 0 0.7 1m 
+
+.control
+    run
+    set xbrushwidth=3
+    meas dc v_th when nfet_out=nfet_in
+    plot deriv(nfet_out)
+    let gain=abs(deriv(nfet_out))>1
+    plot gain
+    let gain=(abs(deriv(nfet_out)) >= 1)*0.7
+    plot gain nfet_out
+    meas vil dc find nfet_in when gain=1 cross=1 
+    meas vil dc find nfet_in when gain=1 cross=last
+.endc
+"}
+```
 
