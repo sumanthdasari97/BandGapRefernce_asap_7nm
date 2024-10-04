@@ -1,5 +1,10 @@
 # BandGapRefernce_asap_7nm
+# Overview of ASAP-7nm
+ASAP7nm is a process design kit (PDK) created by the collaboration between academia and the semiconductor industry, specifically the Academia and Semiconductor Industrial Partnership (ASIP) consortium. This PDK provides access to cutting-edge semiconductor fabrication technologies at the 7-nanometer (nm) technology node. It includes necessary files and documentation for designing integrated circuits (ICs) that boast higher transistor density, enhanced performance, and lower power consumption. Designed for researchers, educators, and industry professionals, ASAP7nm promotes experimentation, educational initiatives, and collaboration in the field of semiconductor engineering. This fosters innovative IC design, practical learning experiences, and prototyping ahead of commercial production.
 
+To install this PDK, you can clone the repository available at https://github.com/The-OpenROAD-Project/asap7.git
+
+To install this PDK, you can clone the repository available at
 Xschem Installation for Ubuntu 
 Open Your Terminal in your ubuntu workstation and execute the following command one by one or copy them into a script and run the script using the terminal.
 ```bash
@@ -34,7 +39,7 @@ Add 7nm model .sch file for FinFET characterization
 ```bash
 git clone https://github.com/AsahiroKenpachi/asap_7nm_Xschem.git
 
-  
+  ```
 
 
 
