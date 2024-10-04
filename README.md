@@ -153,3 +153,18 @@ This characterization allows me to analyze how different transistor sizing affec
 | 20 | 36 | 7 | 5.142857143 | 18 | 7 | 2.571428571 | 0.3918490 | 0.000574 | 0.00786 | 6.55625 | 0.321304| 0 | 0.321304| 0.7 | 0.49932 | 0.20068 |
 
 
+# Propagation Delay (t_pd) in Inverter Characterization
+Propagation delay (t_pd) is a critical parameter in digital circuits, particularly in the design and characterization of inverters. It refers to the time it takes for a change in the input signal to produce a corresponding change in the output signal. Understanding propagation delay is essential for ensuring that a circuit operates correctly at the desired frequency and meets timing specifications.
+# Propagation Delay (t_pd) in Inverter Characterization Using Ngspice
+
+**Propagation delay (t_pd)** is a critical parameter in digital circuit design, especially when characterizing inverters. It represents the time taken for an input signal change to reflect at the output. Understanding propagation delay is essential for ensuring that digital circuits function correctly within specified timing constraints.
+
+## Measuring Propagation Delay with Ngspice
+
+To determine the propagation delay of an inverter using Ngspice, follow these steps:
+
+1. **Circuit Setup:**
+   - Create a netlist for the inverter circuit in Ngspice. This includes defining the inverter's PMOS and NMOS transistors and setting up the input and output connections. You may also include load capacitance to simulate realistic operating conditions.
+
+   ```
+
