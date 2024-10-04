@@ -2,6 +2,7 @@
 
 Xschem Installation for Ubuntu 
 Open Your Terminal in your ubuntu workstation and execute the following command one by one or copy them into a script and run the script using the terminal.
+```bash
 # Install xschem, a schematic capture tool
 git clone https://github.com/StefanSchippers/xschem.git xschem
 cd xschem
@@ -9,5 +10,6 @@ cd xschem
 make
 sudo make install
 cd ..
+```
 
 
