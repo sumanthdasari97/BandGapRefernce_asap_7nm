@@ -45,6 +45,7 @@ git clone https://github.com/AsahiroKenpachi/asap_7nm_Xschem.git
 
 
 N- Finfet Characterestics
+The characterization of an N-channel FinFET (Field-Effect Transistor) at the 7nm technology node. N-FinFETs are advanced multi-gate transistors that provide better control over the channel, reduce leakage currents, and enhance device performance compared to traditional planar technologies.
 ```
 v {xschem version=3.4.5 file_version=1.2
 }
