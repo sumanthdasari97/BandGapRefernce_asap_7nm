@@ -93,6 +93,8 @@ m=1}
 C {lab_pin.sym} 100 20 0 0 {name=p5 sig_type=std_logic lab=nfet_out}
 C {/home/dasari/Desktop/asap_7nm_Xschem/asap_7nm_nfet.sym} 150 60 0 0 {name=nfet2 model=asap_7nm_nfet spiceprefix=X l=7e-009 nfin=14}
 ```
+![Screenshot from 2024-10-04 14-21-36](https://github.com/user-attachments/assets/c93f3269-87e2-4486-aa04-c84e4c9d098a)
+**Figure 1: N-FinFET Characterization Graph for nfin = 14**
 
 
 
