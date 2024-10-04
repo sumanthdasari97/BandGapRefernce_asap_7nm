@@ -94,7 +94,12 @@ C {lab_pin.sym} 100 20 0 0 {name=p5 sig_type=std_logic lab=nfet_out}
 C {/home/dasari/Desktop/asap_7nm_Xschem/asap_7nm_nfet.sym} 150 60 0 0 {name=nfet2 model=asap_7nm_nfet spiceprefix=X l=7e-009 nfin=14}
 ```
 ![Screenshot from 2024-10-04 14-21-36](https://github.com/user-attachments/assets/c93f3269-87e2-4486-aa04-c84e4c9d098a)
-**Figure 1: N-FinFET Characterization Graph for nfin = 14**
+Figure 1: N-FinFET Characterization Graph for nfin = 14
+
+![Screenshot from 2024-10-04 21-31-40](https://github.com/user-attachments/assets/a0abe8e1-db49-4b45-9dd3-5fb7ad152af1)
+Figure 2: N-FinFET Characterization Graph for nfin = 32
+
+The current in the N-FinFET increases as the number of fins (nfin) increases. This behavior is evident in both Figure 1 and Figure 2, where higher values of nfin correspond to a noticeable increase in drain current (Id). This occurs because increasing the number of fins effectively increases the total width of the transistor, allowing for more current to flow through the device under the same bias conditions.
 
 
 
