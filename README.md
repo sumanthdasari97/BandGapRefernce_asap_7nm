@@ -368,10 +368,22 @@ Run the ngspice Command: Execute the command to start ngspice and open your simu
         Thus, NML=0.235577-0=0.235577
 
 # Power Consumption Avg Power 
+
+```
+meas tran curr_inte integ v2#branch from=0p to=100p
+    let power_int=curr_inte*0.7
+    print power_int/100p
+```
+
 ![image](https://github.com/user-attachments/assets/b41d6396-85ce-4c6d-a83a-f49458540397)
 Commands for the avg power
 ![image](https://github.com/user-attachments/assets/153e0f06-067b-421b-83b2-9363ef826212)
 nfet_out vs current through vdd
+
+![image](https://github.com/user-attachments/assets/93a59157-3c18-4d85-a4c4-0df5904bf1fc)
+snapshot of terminal for power analysis
+
+
 
 
 
