@@ -385,5 +385,8 @@ snapshot of terminal for power analysis
 
 
 
+## Power analysis for remaining will update in awhile
+
+
 
 
