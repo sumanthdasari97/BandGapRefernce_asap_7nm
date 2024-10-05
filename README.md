@@ -367,5 +367,11 @@ Run the ngspice Command: Execute the command to start ngspice and open your simu
         Use the formula NML=VIL−VOL. Here, VIL is represented by x0​ and VOL is corresponds to 0v​.
         Thus, NML=0.235577-0=0.235577
 
+# Power Consumption Avg Power 
+![image](https://github.com/user-attachments/assets/b41d6396-85ce-4c6d-a83a-f49458540397)
+Commands for the avg power
+![image](https://github.com/user-attachments/assets/153e0f06-067b-421b-83b2-9363ef826212)
+nfet_out vs current through vdd
+
 
 
