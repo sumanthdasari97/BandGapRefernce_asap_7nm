@@ -383,9 +383,12 @@ nfet_out vs current through vdd
 ![image](https://github.com/user-attachments/assets/93a59157-3c18-4d85-a4c4-0df5904bf1fc)
 snapshot of terminal for power analysis
 
+# Bandgap Reference Circuit Design in ASAP 7nm Technology
+
+## Introduction
+A **bandgap reference circuit** is an essential analog building block used to generate a stable reference voltage, which is independent of variations in temperature, supply voltage, and process variations. In ASAP 7nm technology, designing such a circuit requires careful consideration of device matching, parasitics, and power efficiency due to the challenges posed by scaling.
 
 
-## Power analysis for remaining will update in awhile
 
 
 
