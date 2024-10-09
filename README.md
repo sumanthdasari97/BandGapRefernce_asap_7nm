@@ -416,6 +416,12 @@ CTAT voltages are used in conjunction with PTAT voltages to achieve a stable ban
 voltage  that decreases with an increase in temperature
 
 
+for different current vlaues
+![image](https://github.com/user-attachments/assets/83b325ce-0c42-4afa-8a5c-e79e36bd96f0)
+
+Voltage decreases with decrease in current values 
+
+
 
 
 
