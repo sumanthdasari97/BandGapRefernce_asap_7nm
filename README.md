@@ -411,6 +411,16 @@ CTAT voltages are used in conjunction with PTAT voltages to achieve a stable ban
 ![image](https://github.com/user-attachments/assets/59a860b9-f208-4829-9235-bb58213c2a69)
 
 
+### vctat vs temp from -20 to 125
+![Screenshot from 2024-10-09 05-28-24](https://github.com/user-attachments/assets/e148d40c-b131-4cd0-bfb3-d30f767bd584)
+voltage  that decreases with an increase in temperature
+
+
+
+
+
+
+
 
 
 
