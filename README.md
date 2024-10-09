@@ -390,6 +390,11 @@ A **bandgap reference circuit** is an essential analog building block used to ge
 
 
 
+CTAT CIRCUIT WITH CONSTANT CURRENT SOURCE
+![image](https://github.com/user-attachments/assets/59a860b9-f208-4829-9235-bb58213c2a69)
+
+
+
 
 
 
