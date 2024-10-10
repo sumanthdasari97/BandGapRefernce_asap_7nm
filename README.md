@@ -415,11 +415,7 @@ The **CTAT voltage** behavior is primarily due to the **temperature dependence o
 - As temperature increases, the **threshold voltage** of the n-channel FinFET decreases.
 - This results in a corresponding decrease in the output voltage, VCTAT, since the current through the transistor is maintained constant by the current source I1.
 
-### Mathematical Representation:
-The CTAT voltage (V_CTAT) is a function of the threshold voltage (V_th) and the gate-source voltage (V_GS) of the transistor, which both decrease as temperature rises:
-```math
-V_{CTAT} = V_{GS}(T) \approx V_1 - V_T(T)
-```
+
 
 
 ### vctat vs temp from -20 to 125
@@ -463,10 +459,7 @@ The PTAT voltage is obtained as the **difference between V1 and V2**. The mechan
 - The **thermal voltage (V_T)**, which is proportional to absolute temperature (T), increases as temperature rises. This thermal voltage appears as the difference between the gate-source voltages of `nfet1` and `nfet2`, forming the PTAT component of the circuit.
 - The **difference in the voltages at V1 and V2** is proportional to the thermal voltage, and therefore, **increases linearly with temperature**, which is the hallmark of PTAT behavior.
 
-### Mathematical Representation:
-The PTAT voltage (ΔV) can be expressed as:
-```math
-V_{PTAT} = V_2 - V_1 = V_T \ln\left(\frac{I_1}{I_2}\right)
+
 
 
 
