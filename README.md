@@ -419,6 +419,7 @@ The **CTAT voltage** behavior is primarily due to the **temperature dependence o
 The CTAT voltage (V_CTAT) is a function of the threshold voltage (V_th) and the gate-source voltage (V_GS) of the transistor, which both decrease as temperature rises:
 ```math
 V_{CTAT} = V_{GS}(T) \approx V_1 - V_T(T)
+```
 
 
 ### vctat vs temp from -20 to 125
