@@ -460,6 +460,16 @@ The PTAT voltage is obtained as the **difference between V1 and V2**. The mechan
 - The **difference in the voltages at V1 and V2** is proportional to the thermal voltage, and therefore, **increases linearly with temperature**, which is the hallmark of PTAT behavior.
 
 
+![image](https://github.com/user-attachments/assets/69ffe6d1-38ec-4f2f-8c26-b9ec4ce79f2c)
+**Figure:** Temperature sweep results for \( V_1 \) and \( V_2 \) in a PTAT circuit. Both voltages show a linear decrease as temperature increases from -25°C to 125°C. The PTAT voltage is calculated as the difference between \( V_1 \) and \( V_2 \), demonstrating the proportional relationship to absolute temperature.
+
+
+![image](https://github.com/user-attachments/assets/d9ca73c6-6d7a-4cf7-88b0-dcb9735ac1a8)
+
+**Figure:** The plot of \( V_1 - V_2 \) across temperature sweep from -50°C to 150°C. This represents the PTAT voltage, which is proportional to absolute temperature, demonstrating the linear behavior expected in PTAT circuits.
+
+
+
 
 
 
