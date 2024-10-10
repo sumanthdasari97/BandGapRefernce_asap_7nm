@@ -391,22 +391,7 @@ A **bandgap reference circuit** is an essential analog building block used to ge
 
 
 CTAT CIRCUIT WITH CONSTANT CURRENT SOURCE
-# CTAT Reference Overview
-**Complementary To Absolute Temperature (CTAT)** refers to a voltage or current that decreases with an increase in temperature. This property is essential in bandgap reference circuits, where CTAT voltages are used to offset PTAT (Proportional To Absolute Temperature) voltages, helping to create a stable reference voltage across temperature variations.
-## Key Features
 
-- **Negative Temperature Coefficient**: CTAT voltages typically derive from the base-emitter voltage (\(V_{BE}\)) of bipolar junction transistors (BJTs) or the characteristics of NMOS transistors in subthreshold regions.
-- **Temperature Behavior**: The voltage decreases approximately 2 mV/°C for silicon devices, providing a predictable change with temperature.
-
-## Circuit Implementation
-
-### CTAT in Bandgap Reference Circuits
-
-CTAT voltages are used in conjunction with PTAT voltages to achieve a stable bandgap reference voltage. Here’s a general approach to integrate CTAT in a bandgap circuit:
-
-1. **Diode-Connected Transistor**: Use a diode-connected BJT or NMOS to generate a CTAT voltage.
-2. **Reference Node**: Connect this CTAT voltage to a summing point where a PTAT voltage will also be applied.
-3. **Output Stability**: Adjust resistor values and current settings to optimize the stability of the output reference voltage against temperature changes.
 
 ![image](https://github.com/user-attachments/assets/59a860b9-f208-4829-9235-bb58213c2a69)
 **Figure : CTAT Voltage Generator Circuit**  
