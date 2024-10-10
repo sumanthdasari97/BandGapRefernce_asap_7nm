@@ -422,6 +422,43 @@ for different current vlaues
 Voltage decreases with decrease in current values 
 
 
+# PTAT (Proportional to Absolute Temperature) Voltage
+
+## Overview
+PTAT (Proportional to Absolute Temperature) voltage is a key component in many temperature-compensated circuits, such as **bandgap reference circuits**. As the name suggests, PTAT voltage increases linearly with temperature, making it an essential element in canceling temperature-dependent variations in circuits.
+
+![image](https://github.com/user-attachments/assets/62868d50-e512-4c97-88b8-17a4f9bcb736)
+**Figure : PTAT Voltage Generator Circuit**  
+This schematic illustrates the basic configuration of a PTAT generator. 
+
+# PTAT Circuit Explanation
+
+## Circuit Overview
+This schematic shows the design of a **PTAT (Proportional to Absolute Temperature) voltage generator** implemented using the ASAP 7nm technology node. The PTAT voltage is generated as the **difference between two voltages, V1 and V2**, where each voltage corresponds to different current densities through matched transistors.
+
+### Key Components:
+- **V1**: A reference voltage of 0.7V applied across an n-channel FinFET (`nfet7`).
+- **V2**: The voltage at the output of a differential pair of n-channel FinFETs (`nfet1` and `nfet2`), each biased by a constant current source of 20 µA.
+
+### Current Sources:
+- **I1 and I2**: These are constant current sources, both supplying 20 µA, providing stable biasing for the transistors. The current through these transistors is directly responsible for generating the temperature-dependent voltage differences.
+
+### Transistors:
+- **nfet7**: This n-channel FinFET is biased by the reference voltage (V1), producing a voltage drop that has a slight temperature dependency.
+- **nfet1 and nfet2**: These transistors are matched and biased with identical currents, but their base-emitter voltages differ due to the exponential relationship between current density and voltage. This difference generates the PTAT voltage at V2.
+
+## PTAT Phenomenon
+The PTAT voltage is obtained as the **difference between V1 and V2**. The mechanism relies on the thermal characteristics of the transistors:
+- The **thermal voltage (V_T)**, which is proportional to absolute temperature (T), increases as temperature rises. This thermal voltage appears as the difference between the gate-source voltages of `nfet1` and `nfet2`, forming the PTAT component of the circuit.
+- The **difference in the voltages at V1 and V2** is proportional to the thermal voltage, and therefore, **increases linearly with temperature**, which is the hallmark of PTAT behavior.
+
+### Mathematical Representation:
+The PTAT voltage (ΔV) can be expressed as:
+```math
+V_{PTAT} = V_2 - V_1 = V_T \ln\left(\frac{I_1}{I_2}\right)
+
+
+
 
 
 
