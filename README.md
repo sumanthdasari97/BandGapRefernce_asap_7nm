@@ -409,6 +409,31 @@ CTAT voltages are used in conjunction with PTAT voltages to achieve a stable ban
 3. **Output Stability**: Adjust resistor values and current settings to optimize the stability of the output reference voltage against temperature changes.
 
 ![image](https://github.com/user-attachments/assets/59a860b9-f208-4829-9235-bb58213c2a69)
+**Figure : CTAT Voltage Generator Circuit**  
+This schematic illustrates the basic configuration of a CTAT generator. 
+
+# CTAT (Complementary to Absolute Temperature) Circuit
+
+## Circuit Overview
+This schematic shows a **CTAT voltage generator** circuit, designed using the ASAP 7nm technology node. Unlike the PTAT voltage, which increases with temperature, the **CTAT voltage decreases as temperature increases**. This characteristic is utilized in **bandgap reference circuits** to generate a stable reference voltage by compensating for PTAT behavior.
+
+### Key Components:
+- **VCTAT**: The output voltage, which exhibits CTAT behavior, meaning it decreases as temperature rises.
+- **V1**: A constant voltage source of 0.7V applied across an n-channel FinFET (`nfet7`).
+- **I1**: A constant current source of 10 µA, which biases the transistor `nfet7`.
+
+### Transistor:
+- **nfet7**: The n-channel FinFET used to generate the CTAT voltage. The gate-source voltage of this transistor is temperature-dependent, and as temperature increases, the threshold voltage decreases, causing the gate-source voltage (and thus `VCTAT`) to decrease. This is what creates the CTAT characteristic.
+
+## CTAT Phenomenon
+The **CTAT voltage** behavior is primarily due to the **temperature dependence of the threshold voltage** of the transistor:
+- As temperature increases, the **threshold voltage** of the n-channel FinFET decreases.
+- This results in a corresponding decrease in the output voltage, VCTAT, since the current through the transistor is maintained constant by the current source I1.
+
+### Mathematical Representation:
+The CTAT voltage (V_CTAT) is a function of the threshold voltage (V_th) and the gate-source voltage (V_GS) of the transistor, which both decrease as temperature rises:
+```math
+V_{CTAT} = V_{GS}(T) \approx V_1 - V_T(T)
 
 
 ### vctat vs temp from -20 to 125
