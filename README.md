@@ -562,7 +562,7 @@ $$
 V_{ref} = V_{CTAT} + \alpha \cdot V_{PTAT}
 $$
 
-Where $ \alpha $ is a constant chosen such that the temperature dependence is minimized.
+Where $\alpha$ is a constant chosen such that the temperature dependence is minimized.
 
 ---
 
@@ -608,7 +608,7 @@ Where:
 - $V_{CTAT}$ is the complementary voltage, decreasing with temperature.
 - $\alpha \cdot V_{PTAT}$ is the proportional voltage, increasing with temperature.
 
-By adjusting the value of $ \alpha $, the temperature coefficient of the reference voltage can be minimized, providing a stable reference voltage over a wide temperature range.
+By adjusting the value of $\alpha$, the temperature coefficient of the reference voltage can be minimized, providing a stable reference voltage over a wide temperature range.
 
 
 
