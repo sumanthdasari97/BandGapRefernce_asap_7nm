@@ -536,11 +536,11 @@ The calculation proceeds as follows:
 Thus, the required resistor value \( R \) is approximately **18.6 kΩ**.
 
 ```
-``
+$
 \[
 I = \frac{V_T \cdot \ln(N)}{R}
 \]
-``
+$
 
 
 
