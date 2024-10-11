@@ -694,7 +694,8 @@ Thus, the resistor $R_2$ should be approximately $4.14 \, \text{k}\Omega$.
 
 
 ## Bandgap Reference Circuit - Temperature Sweep
-![image](https://github.com/user-attachments/assets/3494fb7d-f73e-4c59-825e-a13869af4cac)
+![image](https://github.com/user-attachments/assets/6ca6f83a-31eb-48e2-81b9-79442596ceac)
+
 
 This plot shows the temperature sweep from -45°C to 150°C in a Bandgap Reference (BGR) circuit designed using ASAP 7nm technology. The following voltages are displayed:
 
