@@ -486,10 +486,12 @@ In this PTAT circuit, a **self-biased current mirror** made of MOSFETs is used t
 2. **PTAT Voltage Across Resistor**: The PTAT current flowing through the resistor produces a voltage drop across it. This voltage is **PTAT in nature** because the current through the resistor increases proportionally with temperature. The voltage across the resistor \( V_R \) is given by Ohm's Law:
 
 
-![Screenshot from 2024-10-11 04-30-22](https://github.com/user-attachments/assets/13317936-4fad-4e95-8ede-342a11f1f137)
+![image](https://github.com/user-attachments/assets/017c8c48-3442-4272-8675-ff7994aa3761)
+
 **Figure** This schematic illustrates the Current Mirror Configuration of a PTAT generator.
 
-![image](https://github.com/user-attachments/assets/01b9c7a3-2781-4af5-80ef-14c734888443)
+![image](https://github.com/user-attachments/assets/169fe5ac-49ce-433e-bc46-b1025a82615a)
+
 **Figure** This snapshot is the voltage across the resistor 
 
 ### Resistor Value Calculation
