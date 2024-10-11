@@ -494,12 +494,12 @@ In this PTAT circuit, a **self-biased current mirror** made of MOSFETs is used t
 
 ### Resistor Value Calculation
 
-In this PTAT circuit, the value of the resistor \( R \) can be calculated using the relationship involving the thermal voltage (\( V_T \)), the natural logarithm of the current ratio (\( N \)), and the desired PTAT current (\( I \)). The formula is as follows:
+In this PTAT circuit, the value of the resistor \( R \) can be calculated using the relationship involving the thermal voltage \( V_T \), the natural logarithm of the current ratio \( N \), and the desired PTAT current \( I \). The formula is as follows:
 
-${{  \[
+$$
 I = \frac{V_T \cdot \ln(N)}{R}
-\]
-}}
+$$
+
 Where:
 - \( I \) is the desired PTAT current (20 µA).
 - \( V_T \) is the thermal voltage for the NFET (0.18 V).
@@ -507,9 +507,9 @@ Where:
 
 Rearranging the equation to solve for \( R \) gives:
 
-\[
+$$
 R = \frac{V_T \cdot \ln(N)}{I}
-\]
+$$
 
 #### Substituting the values:
 - \( V_T = 0.18 \, \text{V} \)
@@ -519,28 +519,24 @@ R = \frac{V_T \cdot \ln(N)}{I}
 The calculation proceeds as follows:
 
 1. Calculate \( \ln(N) \):
-   \[
-   \ln(8) \approx 2.079
-   \]
+
+$$
+\ln(8) \approx 2.079
+$$
 
 2. Substitute into the equation for \( R \):
-   \[
-   R = \frac{0.18 \, \text{V} \cdot 2.079}{20 \times 10^{-6} \, \text{A}} 
-   \]
+
+$$
+R = \frac{0.18 \, \text{V} \cdot 2.079}{20 \times 10^{-6} \, \text{A}} 
+$$
 
 3. Calculate \( R \):
-   \[
-   R \approx \frac{0.37422 \, \text{V}}{20 \times 10^{-6} \, \text{A}} = 18611 \, \Omega \approx 18.6 \, k\Omega
-   \]
 
-Thus, the required resistor value \( R \) is approximately **18.6 kΩ**.
+$$
+R \approx \frac{0.37422 \, \text{V}}{20 \times 10^{-6} \, \text{A}} = 18611 \, \Omega \approx 18.6 \, k\Omega
+$$
 
-
-$
-\[
-I = \frac{V_T \cdot \ln(N)}{R}
-\]
-$
+Thus, the required resistor value \( R \) is approximately **18
 
 
 
