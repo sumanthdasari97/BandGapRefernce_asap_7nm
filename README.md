@@ -469,6 +469,41 @@ The PTAT voltage is obtained as the **difference between V1 and V2**. The mechan
 **Figure:** The plot of \( V_1 - V_2 \) across temperature sweep from -50°C to 150°C. This represents the PTAT voltage, which is proportional to absolute temperature, demonstrating the linear behavior expected in PTAT circuits.
 
 
+## PTAT (Proportional to Absolute Temperature) Circuit
+
+### Overview
+A **PTAT circuit** generates a voltage or current that is proportional to absolute temperature, which is used in a wide range of analog circuits such as bandgap reference circuits, temperature sensors, and compensation circuits. The key feature of a PTAT circuit is that its output voltage or current increases linearly with temperature.
+
+### Circuit Description
+In a PTAT circuit, two transistors (typically bipolar junction transistors or MOSFETs) are used in different operating conditions (e.g., different emitter current densities or sizes) to create a difference in their base-emitter voltages (\(V_{BE}\)) or gate-source voltages (\(V_{GS}\)) that results in a temperature-dependent voltage or current. This difference, which is the PTAT voltage, is proportional to the absolute temperature.
+
+### Key Components:
+- **Transistors (M1, M2):** Two matched transistors operating at different current densities, creating a voltage difference that is proportional to the temperature.
+- **Resistor (R):** Converts the voltage difference into a proportional current, or vice versa, depending on the circuit configuration.
+- **Current Output:** The output is a current or voltage that increases linearly with temperature, making it useful in temperature-compensation circuits.
+
+### Operation:
+1. **Proportional Voltage Generation**: The difference in base-emitter voltages (\(V_{BE1} - V_{BE2}\)) or gate-source voltages (\(V_{GS1} - V_{GS2}\)) between two transistors operating under different current densities results in a voltage proportional to absolute temperature.
+   
+2. **PTAT Current**: This voltage is converted to a current by passing it through a resistor. The resulting current is proportional to temperature, giving a PTAT current.
+
+3. **Self-Biasing Mechanism**: Often, the circuit is self-biased using a feedback mechanism to ensure that the current stabilizes without external references.
+
+### PTAT Voltage Equation:
+The PTAT voltage is typically given by:
+\[
+V_{PTAT} = \frac{kT}{q} \ln\left(\frac{I_1}{I_2}\right)
+\]
+where:
+- \( k \) is Boltzmann's constant.
+- \( T \) is the absolute temperature.
+- \( q \) is the charge of an electron.
+- \( I_1 \) and \( I_2 \) are the currents through the two transistors.
+
+### Example Calculation:
+To design a PTAT circuit with a current of **20 µA**, the voltage difference \( V_{PTAT} \) between two points in the circuit can be determined by the resistor and the
+
+
 
 
 
