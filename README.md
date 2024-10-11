@@ -611,6 +611,85 @@ Where:
 By adjusting the value of $\alpha$, the temperature coefficient of the reference voltage can be minimized, providing a stable reference voltage over a wide temperature range.
 
 
+# Derivation and Calculation of Alpha and Resistor Values in Bandgap Reference Circuit
+
+In a Bandgap Reference (BGR) circuit, the reference voltage $V_{ref}$ is derived from the combination of the **Complementary to Absolute Temperature** (CTAT) voltage and the **Proportional to Absolute Temperature** (PTAT) voltage:
+
+$$
+V_{ref} = V_{CTAT} + \alpha \cdot V_{PTAT}
+$$
+
+## 1. **Derivative of $V_{ref}$ with Respect to Temperature**
+
+To minimize the temperature dependence of the reference voltage, we set the derivative of $V_{ref}$ with respect to temperature ($T$) to zero. This ensures that the reference voltage remains constant over a range of temperatures:
+
+$$
+\frac{dV_{ref}}{dT} = \frac{dV_{CTAT}}{dT} + \alpha \cdot \frac{dV_{PTAT}}{dT} = 0
+$$
+
+Rearranging the equation to solve for $\alpha$ gives:
+
+$$
+\alpha = - \frac{\frac{dV_{CTAT}}{dT}}{\frac{dV_{PTAT}}{dT}}
+$$
+
+From the graphs of $V_{CTAT}$ and $V_{PTAT}$, we approximate the following derivatives:
+- $\frac{dV_{CTAT}}{dT} \approx -380 \, \mu V/K$
+- $\frac{dV_{PTAT}}{dT} \approx 820 \, \mu V/K$
+
+Substituting these values into the equation for $\alpha$:
+
+$$
+\alpha = - \frac{-380 \, \mu V/K}{820 \, \mu V/K} \approx 0.463
+$$
+
+## 2. **Relationship Between Alpha and Resistor Values**
+
+In the BGR circuit, the value of $\alpha$ is related to the resistor values $R_1$ and $R_2$ as follows:
+
+$$
+\alpha = \frac{R_2}{R_1} \cdot \ln(N)
+$$
+
+Where:
+- $N$ is the current ratio (typically $N = 8$ in this case).
+- $R_1$ is the known resistor value ($R_1 = 18.6 \, \text{k}\Omega$).
+- $R_2$ is the unknown resistor value that we want to calculate.
+
+Rearranging the equation to solve for $R_2$:
+
+$$
+R_2 = \alpha \cdot R_1 \cdot \frac{1}{\ln(N)}
+$$
+
+Substituting the known values:
+
+$$
+R_2 = 0.463 \cdot 18.6 \, \text{k}\Omega \cdot \frac{1}{\ln(8)}
+$$
+
+First, calculate $\ln(8)$:
+
+$$
+\ln(8) \approx 2.079
+$$
+
+Now, substitute this into the equation:
+
+$$
+R_2 = 0.463 \cdot 18.6 \, \text{k}\Omega \cdot \frac{1}{2.079}
+$$
+
+Finally, calculate the value of $R_2$:
+
+$$
+R_2 \approx 4.14 \, \text{k}\Omega
+$$
+
+Thus, the resistor $R_2$ should be approximately $4.14 \, \text{k}\Omega$.
+
+
+
 
 
 
