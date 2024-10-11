@@ -503,7 +503,7 @@ I = \frac{V_T \cdot \ln(N)}{R}
 Where:
 - \( I \) is the desired PTAT current (20 µA).
 - \( V_T \) is the thermal voltage for the NFET (0.18 V).
-- \( N \) is the current ratio between the two MOSFETs (in this case, \( N = 2 \)).
+- \( N \) is the current ratio between the two MOSFETs (in this case, \( N = 8 \)).
 
 Rearranging the equation to solve for \( R \) gives:
 
@@ -513,17 +513,28 @@ R = \frac{V_T \cdot \ln(N)}{I}
 
 #### Substituting the values:
 - \( V_T = 0.18 \, \text{V} \)
-- \( N = 2 \)
+- \( N = 8 \)
 - \( I = 20 \, \mu\text{A} = 20 \times 10^{-6} \, \text{A} \)
 
 The calculation proceeds as follows:
 
 1. Calculate \( \ln(N) \):
    \[
-   \ln(2) \approx 0.693
+   \ln(8) \approx 2.079
    \]
 
-2. Substitute into the equation for \( 
+2. Substitute into the equation for \( R \):
+   \[
+   R = \frac{0.18 \, \text{V} \cdot 2.079}{20 \times 10^{-6} \, \text{A}} 
+   \]
+
+3. Calculate \( R \):
+   \[
+   R \approx \frac{0.37422 \, \text{V}}{20 \times 10^{-6} \, \text{A}} = 18611 \, \Omega \approx 18.6 \, k\Omega
+   \]
+
+Thus, the required resistor value \( R \) is approximately **18.6 kΩ**.
+
 
 
 
