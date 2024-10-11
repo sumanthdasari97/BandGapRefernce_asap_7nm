@@ -484,45 +484,46 @@ In this PTAT circuit, a **self-biased current mirror** made of MOSFETs is used t
 1. **Self-Biased Current Mirror Operation**: The current mirror stabilizes the current through the MOSFETs. The current through the mirror creates a voltage drop across the resistor, which is directly proportional to the temperature.
    
 2. **PTAT Voltage Across Resistor**: The PTAT current flowing through the resistor produces a voltage drop across it. This voltage is **PTAT in nature** because the current through the resistor increases proportionally with temperature. The voltage across the resistor \( V_R \) is given by Ohm's Law:
+
+
+![Screenshot from 2024-10-11 04-30-22](https://github.com/user-attachments/assets/13317936-4fad-4e95-8ede-342a11f1f137)
+**Figure** This schematic illustrates the Current Mirror Configuration of a PTAT generator.
+
+![image](https://github.com/user-attachments/assets/01b9c7a3-2781-4af5-80ef-14c734888443)
+**Figure** This snapshot is the voltage across the resistor 
+
+### Resistor Value Calculation
+
+In this PTAT circuit, the value of the resistor \( R \) can be calculated using the relationship involving the thermal voltage (\( V_T \)), the natural logarithm of the current ratio (\( N \)), and the desired PTAT current (\( I \)). The formula is as follows:
+
 \[
-V_R = I_{PTAT} \times R
+I = \frac{V_T \cdot \ln(N)}{R}
 \]
-Since \( I_{PTAT} \) increases with temperature, the voltage \( V_R \) is also proportional to temperature, making it a PTAT voltage.
 
-### PTAT Current Equation:
-The PTAT current \( I_{PTAT} \) through the resistor can be described as:
+Where:
+- \( I \) is the desired PTAT current (20 µA).
+- \( V_T \) is the thermal voltage for the NFET (0.18 V).
+- \( N \) is the current ratio between the two MOSFETs (in this case, \( N = 2 \)).
+
+Rearranging the equation to solve for \( R \) gives:
+
 \[
-I_{PTAT} = \frac{kT}{q} \frac{\ln(N)}{R}
+R = \frac{V_T \cdot \ln(N)}{I}
 \]
-where:
-- \( k \) is Boltzmann's constant.
-- \( T \) is the absolute temperature.
-- \( q \) is the charge of an electron.
-- \( N \) is the current ratio between the two MOSFETs (based on their W/L ratios).
-- \( R \) is the resistor value.
 
-### Example Calculation:
-For a desired PTAT current of **20 µA** and assuming a PTAT voltage drop across the resistor of **70 mV** at room temperature, the resistor value can be calculated as:
-\[
-R = \frac{V_{PTAT}}{I_{PTAT}} = \frac{70 \, \text{mV}}{20 \times 10^{-6} \, \text{A}} = 3.5 \, \text{k}\Omega
-\]
-Thus, a resistor value of 3.5 kΩ will generate a PTAT current of 20 µA.
+#### Substituting the values:
+- \( V_T = 0.18 \, \text{V} \)
+- \( N = 2 \)
+- \( I = 20 \, \mu\text{A} = 20 \times 10^{-6} \, \text{A} \)
 
-### Figure:
+The calculation proceeds as follows:
 
-![PTAT Circuit with Self-Biased Current Mirror using MOSFETs](path/to/your/image.png)
+1. Calculate \( \ln(N) \):
+   \[
+   \ln(2) \approx 0.693
+   \]
 
-**Figure:** A schematic of the PTAT circuit using a self-biased current mirror with MOSFETs. The PTAT voltage is measured across the resistor \( R \), with the current mirror generating a PTAT current.
-
-### Applications:
-- **Temperature Sensors**: PTAT circuits are widely used in temperature sensing applications.
-- **Bandgap Reference Circuits**: PTAT current is combined with complementary-to-absolute-temperature (CTAT) voltages to create temperature-independent reference voltages.
-- **Temperature Compensation**: Used in analog circuits requiring temperature stability.
-
-### Conclusion:
-The PTAT circuit, utilizing a self-biased MOSFET current mirror, effectively generates a temperature-proportional current and voltage. The voltage measured across the resistor is PTAT in nature, making this circuit highly useful for temperature sensing and temperature-compensated reference circuits.
-
-
+2. Substitute into the equation for \( 
 
 
 
