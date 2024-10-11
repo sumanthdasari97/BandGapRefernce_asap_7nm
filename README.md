@@ -690,6 +690,18 @@ Thus, the resistor $R_2$ should be approximately $4.14 \, \text{k}\Omega$.
 
 
 
+## Bandgap Reference Circuit - Temperature Sweep
+
+This plot shows the temperature sweep from -45°C to 150°C in a Bandgap Reference (BGR) circuit designed using ASAP 7nm technology. The following voltages are displayed:
+
+- **Vref** (yellow): Exhibits a slight increase with temperature, representing its temperature-independent characteristic.
+- **Vctat** (red): Shows a negative temperature coefficient, decreasing as the temperature increases, indicating CTAT voltage behavior.
+- **Vref - Vctat** (blue): The difference between the two voltages increases with temperature, demonstrating the compensation between the PTAT and CTAT components in the BGR circuit.
+
+This plot validates the BGR circuit's ability to maintain a stable reference voltage across a wide temperature range.
+
+![BGR Temperature Plot](![image](https://github.com/user-attachments/assets/3494fb7d-f73e-4c59-825e-a13869af4cac))
+
 
 
 
