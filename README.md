@@ -535,9 +535,9 @@ $$
 $$
 R \approx \frac{0.37422 \, \text{V}}{20 \times 10^{-6} \, \text{A}} = 18611 \, \Omega \approx 18.6 \, k\Omega
 $$
-
+$$
 Thus, the required resistor value \( R \) is approximately 18.6 \, k\Omega
-
+$$
 
 
 
