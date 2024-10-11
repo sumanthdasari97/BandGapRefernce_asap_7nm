@@ -496,10 +496,10 @@ In this PTAT circuit, a **self-biased current mirror** made of MOSFETs is used t
 
 In this PTAT circuit, the value of the resistor \( R \) can be calculated using the relationship involving the thermal voltage (\( V_T \)), the natural logarithm of the current ratio (\( N \)), and the desired PTAT current (\( I \)). The formula is as follows:
 ```
-\[
+${{  \[
 I = \frac{V_T \cdot \ln(N)}{R}
 \]
-
+}}
 Where:
 - \( I \) is the desired PTAT current (20 µA).
 - \( V_T \) is the thermal voltage for the NFET (0.18 V).
