@@ -495,7 +495,7 @@ In this PTAT circuit, a **self-biased current mirror** made of MOSFETs is used t
 ### Resistor Value Calculation
 
 In this PTAT circuit, the value of the resistor \( R \) can be calculated using the relationship involving the thermal voltage (\( V_T \)), the natural logarithm of the current ratio (\( N \)), and the desired PTAT current (\( I \)). The formula is as follows:
-```
+
 ${{  \[
 I = \frac{V_T \cdot \ln(N)}{R}
 \]
@@ -535,7 +535,7 @@ The calculation proceeds as follows:
 
 Thus, the required resistor value \( R \) is approximately **18.6 kΩ**.
 
-```
+
 $
 \[
 I = \frac{V_T \cdot \ln(N)}{R}
