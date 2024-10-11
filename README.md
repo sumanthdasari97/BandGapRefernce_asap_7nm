@@ -610,7 +610,8 @@ Where:
 
 By adjusting the value of $\alpha$, the temperature coefficient of the reference voltage can be minimized, providing a stable reference voltage over a wide temperature range.
 
-![image](https://github.com/user-attachments/assets/8e313011-f1db-47ad-b034-6865085e3798)
+![image](https://github.com/user-attachments/assets/1e5e2826-7136-4f69-bfea-0f160eeac7d1)
+
 **Figure** This schematic illustrates the Final Circuit of the Band Gap Reference Circuit 
 
 # Derivation and Calculation of Alpha and Resistor Values in Bandgap Reference Circuit
