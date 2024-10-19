@@ -704,7 +704,12 @@ This plot shows the temperature sweep from -45°C to 150°C in a Bandgap Referen
 - **Vref - Vctat** (blue): The difference between the two voltages increases with temperature, demonstrating the compensation between the PTAT and CTAT components in the BGR circuit.
 
 
+## Acknowledgements
 
+I would like to express my sincere gratitude to:
+- **[Kunal Gosh](https://www.linkedin.com/in/kunal-ghosh-vlsisystemdesign-com-28084836/)**,Co-Founder of VLSI System Design (VSD) Corp. Pvt. Ltd.
+- **[Dr Skandha Deepsita S](https://www.linkedin.com/in/dr-skandha-deepsita-s-027433ba/)**,Physical Design Consultant, VLSI System Design (VSD) Corp. Pvt. Ltd.
+- **[Jossan Eleazar B](https://www.linkedin.com/in/jossan-eleazar-b-79809a25a/)**,Ex- ASIC engineer at Meister-gen Technologies
 
 
 
